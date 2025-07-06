@@ -1,0 +1,16 @@
+<template>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="text-input-id-46">
+        <abbr class="slds-required" title="required">* </abbr>Input Label</label>
+        <div class="slds-form-element__control">
+        <input type="number" id="text-input-id-46" oninput={handleChange} placeholder="Placeholder text…" required="" class="slds-input" />
+        </div>
+    </div>
+    <template for:each={accountToDisplay} for:item="account">
+        <lightning-card key={account.Id}>
+        <h1>{account.Id}</h1>
+        <h1>{account.Name}</h1>
+        <h1>{account.AnnualRevenue}</h1>        
+        </lightning-card>
+    </template>
+</template>

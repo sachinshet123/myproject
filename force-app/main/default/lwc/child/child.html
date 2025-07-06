@@ -1,0 +1,11 @@
+<template>
+    <h1 class="design">This is a Child Component</h1>
+    <h2 class="design">this is child h2 tag</h2>
+    <h1>hello I am child h3 tag</h1>
+    <template for:each={arraykk} for:item="kk">
+        <div key={kk.id}>
+            <p>{kk.name}</p>
+            <p>kk.age</p>
+        </div>
+    </template>
+</template>

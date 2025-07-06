@@ -1,0 +1,39 @@
+<template>
+    <lightning-card>
+    <lightning-record-form
+        object-api-name={account}
+        fields={accfields}
+        onsuccess={saveAccountandShowOption}>
+    </lightning-record-form>
+    <template if:true={showOption}>
+        <div class="button-container">
+        <div class="button-section">
+         <lightning-button label="Contact" onclick={handleButtonClickContact}></lightning-button>
+        </div>
+          <!-- Create Contact -->
+         
+        <div class="button-section">
+            <lightning-button label="Opportunity" onclick={handleButtonClickOpp}></lightning-button>
+        </div>
+       
+        <div class="button-section">
+            <lightning-button label="Case" onclick={handleButtonClickCase}></lightning-button>
+        </div>
+    </div>
+        <div if:true={showContact}>
+            <lightning-input label="Contact First Name" value={contactFirstName} name="contactFirstName" onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Contact Last Name" value={contactLastName} name="contactLastName" onchange={handleInputChange}></lightning-input>
+            <lightning-button label="Save" onclick={createContact}></lightning-button>
+        </div>
+        <div if:true={showOpp}>
+            <lightning-input label="Opportunity Name" value={opportunityName} name="opportunityName" onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Opportunity Amount" type="number" value={opportunityAmount} name="opportunityAmount" onchange={handleInputChange}></lightning-input>
+            <lightning-button label="Save" onclick={createOpportunity}></lightning-button>
+        </div>
+        <div if:true={showCase}>
+            <lightning-input label="Case Subject" value={caseSubject} name="caseSubject" onchange={handleInputChange}></lightning-input>
+            <lightning-button label="Save" onclick={createCase}></lightning-button>
+        </div>  
+    </template>
+</lightning-card>
+</template>

@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Parent Component">
+        <c-personal-info onpersonalinfo={handlePersonalInfo}></c-personal-info>
+
+        <template if:true={personalInfo.name}>
+            <p><strong>Full Name:</strong> {personalInfo.name}</p>
+            <p><strong>Email:</strong> {personalInfo.email}</p>
+            <p><strong>Phone:</strong> {personalInfo.phone}</p>
+            <p><strong>Address:</strong> {personalInfo.address}</p>
+        </template>
+    </lightning-card>
+</template>

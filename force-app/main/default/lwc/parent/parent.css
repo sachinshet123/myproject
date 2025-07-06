@@ -1,0 +1,17 @@
+@import 'c/cssLibrary';
+
+h1 {
+    font-size: xx-large;
+    color: red;
+}
+
+c-child {
+    font-size: xx-large;
+    color: red;
+}
+
+.childCss {
+    color : pink;
+    display: block;
+    border: 4px solid green;
+}

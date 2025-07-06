@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Contact List with Pagination">
+        <template if:true={contacts}>
+            <template for:each={contacts} for:item="contact">
+                <p key={contact.id}>{contact.fields.Name.value}</p>
+            </template>
+        </template>
+        <template if:false={contacts}>
+            <p>No contacts found.</p>
+        </template>
+        <div class="slds-m-top_medium">
+            <lightning-button 
+                label="Previous" 
+                onclick={handlePrevious}>
+            </lightning-button>
+            <lightning-button 
+                label="Next" 
+                onclick={handleNext} 
+                class="slds-m-left_x-small">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,20 @@
+<template>
+    <lightning-combobox
+        name="objectSelector"
+        label="Object Selector"
+        placeholder="Select an Object"
+        options={objectOptions}
+        onchange={handleObjectChange}
+        value={selectedId}>
+    </lightning-combobox>
+
+    <!-- Display selected fields -->
+    <template if:true={fields.length}>
+        <p>Selected Fields:</p>
+        <ul>
+            <template for:each={fields} for:item="field">
+                <li key={field.fieldApiName}>{field.fieldApiName}</li>
+            </template>
+        </ul>
+    </template>
+</template>

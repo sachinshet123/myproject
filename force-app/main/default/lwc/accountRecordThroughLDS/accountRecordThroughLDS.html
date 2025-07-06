@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Fetch Account Record" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <lightning-input 
+                label="Enter Account Record ID" 
+                onchange={handleInputChange}
+                placeholder="001XXXXXXXXXXXX">
+            </lightning-input>
+
+            <template if:true={accountName}>
+                <p><strong>Account Name:</strong> {accountName}</p>
+            </template>
+
+            <template if:true={error}>
+                <p style="color:red;"><strong>Error:</strong> {error.body.message}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+.list-first {
+    font-weight: bold;
+    color: green;
+}
+
+.list-last {
+    font-weight: bold;
+    color: red;
+}
+
+lightning-card {
+    margin-bottom: 20px;
+}
+
+lightning-input {
+    margin-bottom: 10px;
+}

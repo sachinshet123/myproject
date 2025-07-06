@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Account Data">
+        <div class="slds-p-around_medium">
+            <template if:true={accounts}>
+                <table border="1" cellspacing="0" cellpadding="5" style="border-collapse:collapse;" class="tblColPad">                  
+                    <tr>
+                        <th>Name</th>
+                        <th>Industry</th>
+                    </tr>
+                    <template for:each={accounts} for:item="account">
+                        <tr key={account.Id}>
+                            <td>{account.Name}</td>
+                            <td>{account.Industry}</td>
+                        </tr>
+                    </template>
+                </table> <!-- ✅ Added closing table tag -->
+            </template>
+
+            <!-- ✅ Moved error message outside of the table -->
+            <template if:true={error}>
+                <p class="slds-text-color_error">Error fetching accounts. Please try again.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

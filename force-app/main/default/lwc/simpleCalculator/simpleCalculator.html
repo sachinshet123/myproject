@@ -1,0 +1,9 @@
+<template>
+    <div>
+        <p>result : {result}</p>
+        <lightning-input type="number" label="Enter First Number" value={number1} onchange={handleNumber1Change}></lightning-input>
+        <lightning-input type="number" label="Enter Second Number" value={number2} onchange={handleNumber2Change}></lightning-input>
+        <lightning-combobox label="Select Operator" value={selectedOperator} options={operatorOptions} onchange={handleOperationChange}></lightning-combobox>
+        <lightning-button label="Calculate" onclick={handleCalculate}></lightning-button>
+    </div>
+</template>

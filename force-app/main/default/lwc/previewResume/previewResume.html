@@ -1,0 +1,46 @@
+<template>
+    <lightning-card variant="Narrow" title="Resume Preview" icon-name="custom:custom63">
+        <div class="slds-p-horizontal_medium">
+            personalInformation
+            <!-- Personal Information -->
+            <h2 class="slds-text-heading_medium slds-m-bottom_small">Personal Information</h2>
+            <p><strong>Full Name:</strong> {personalInformation.fullName}</p>
+            <p><strong>Email:</strong> {personalInformation.email}</p>
+            <p><strong>Phone:</strong> {personalInformation.phone}</p>
+            <p><strong>Address:</strong> {personalInformation.address}</p>
+
+            <!-- Summary -->
+            <h2 class="slds-text-heading_medium slds-m-top_medium slds-m-bottom_small">Summary</h2>
+            <p>{summary}</p>
+
+            <!-- Skills -->
+            <h2 class="slds-text-heading_medium slds-m-top_medium slds-m-bottom_small">Skills</h2>
+            <ul>
+                <template for:each={skills} for:item="skill">
+                    <li key={skill.id}>{skill.name}</li>
+                </template>
+            </ul>
+
+            <!-- Work Experience -->
+            <h2 class="slds-text-heading_medium slds-m-top_medium slds-m-bottom_small">Work Experience</h2>
+            <template for:each={workExperiences} for:item="work">
+                <div key={work.id} class="slds-m-bottom_small">
+                    <p><strong>Job Title:</strong> {work.jobtitle}</p>
+                    <p><strong>Company:</strong> {work.companyname}</p>
+                    <p><strong>Start Date:</strong> {work.startdate}</p>
+                    <p><strong>End Date:</strong> {work.enddate}</p>
+                </div>
+            </template>
+
+            <!-- Education -->
+            <h2 class="slds-text-heading_medium slds-m-top_medium slds-m-bottom_small">Education</h2>
+            <template for:each={educations} for:item="edu">
+                <div key={edu.id} class="slds-m-bottom_small">
+                    <p><strong>Degree:</strong> {edu.degree}</p>
+                    <p><strong>Institution:</strong> {edu.institution}</p>
+                    <p><strong>Year:</strong> {edu.year}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

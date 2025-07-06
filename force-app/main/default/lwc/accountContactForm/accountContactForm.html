@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Create Account">
+        <lightning-record-form 
+            object-api-name="Account"
+            fields={accountFields}
+            onsuccess={handleAccountSuccess}
+            onerror={handleError}
+            columns="2">
+        </lightning-record-form>
+    </lightning-card>
+
+    <template if:true={showContactForm}>
+        <lightning-card title="Create Contact for Account">
+            <lightning-record-form 
+                object-api-name="Contact"
+                fields={contactFields}
+                onsuccess={handleContactSuccess}
+                onerror={handleError}
+                record-id={accountId}
+                columns="2">
+            </lightning-record-form>
+        </lightning-card>
+    </template>
+</template>

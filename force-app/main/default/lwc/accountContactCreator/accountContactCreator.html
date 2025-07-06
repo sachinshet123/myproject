@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Create Account">
+        <template if:true={showAccountForm}>
+            <lightning-record-form object-api-name={account} 
+            fields={accountFields}
+                onsubmit={handleAccountSubmit}
+                onsuccess={handleAccountSuccess}
+                onerror={handleError}>
+            </lightning-record-form>
+        </template>
+   
+        <template if:true={accountId}>
+            <lightning-card title="Create Contact">
+                <lightning-record-form object-api-name={contact} fields={contactFields}
+            onsubmit={handleContactSubmit} onsuccess={handleContactSuccess}
+            onerror={handleError}></lightning-record-form>
+            </lightning-record-form>
+            </lightning-card>
+        </template>
+    </lightning-card>
+    </template>

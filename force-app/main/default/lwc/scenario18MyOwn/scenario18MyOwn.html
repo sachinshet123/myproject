@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Create Account along with Contact">
+        <lightning-record-form object-api-name={objectAPIName} fields={fields} onsuccess={handleAccountOnSuccess} record-id={recordId}>
+        </lightning-record-form>
+    </lightning-card>
+    <template if:true={bool}>
+        <lightning-card title="Create Account along with Contact">
+            <lightning-record-form object-api-name={objectAPIName} fields={fields} record-id={recordId}>
+            </lightning-record-form>
+        </lightning-card>
+    </template>
+
+
+</template>

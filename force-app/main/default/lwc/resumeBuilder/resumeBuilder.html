@@ -1,0 +1,15 @@
+<template>
+    <c-personal-info onupdateresume={handleUpdateResume}></c-personal-info>
+    <c-education-detail onupdateeducation={handleUpdateEducation}></c-education-detail>
+    <c-work-experience onupdateworkexperience={handleWorkExperiences}></c-work-experience>
+    <c-skills onupdateskill={handleSkill}></c-skills>
+    <c-summary onupdatesummary={handleSummary}></c-summary>
+    <!-- Preview Resume -->
+    <c-preview-resume 
+        personal-information={personalInformation}
+        summary={summary}
+        skills={skills}
+        work-experiences={workExperiences}
+        educations={educations}>
+    </c-preview-resume>
+</template>

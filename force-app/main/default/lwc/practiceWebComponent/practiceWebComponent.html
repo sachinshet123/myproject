@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Contact List">
+        <ul>
+            <template iterator:it={contacts}>
+                <li key={it.value.id}>
+                    <div if:true={it.first} class="list-first">{it.value.name}</div>
+                    <div>{it.value.name}</div>
+                    <div if:true={it.last} class="list-last">{it.value.name}</div>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+
+    <lightning-card title="User Form">
+        <lightning-input label="Name" onchange={handleChangeName}></lightning-input>
+        <lightning-input type="number" label="Age" onchange={handleChangeAge}></lightning-input>
+        <lightning-input label="Gender" onchange={handleChangeGender}></lightning-input>
+        <lightning-input type="email" label="Email" onchange={handleChangeEmail}></lightning-input>
+        <lightning-input type="tel" label="Phone" onchange={handleChangePhone}></lightning-input>
+
+        <lightning-button label="Submit" variant="brand" onclick={handleSubmit}></lightning-button>
+
+        <template if:false={boolean}>
+            <p>Name: {name}</p>
+            <p>Age: {age}</p>
+            <p>Gender: {gender}</p>
+            <p>Email: {email}</p>
+            <p>Phone: {phone}</p>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,26 @@
+<template>
+    <div>
+        <p>Item 1</p>
+        <lightning-input label="Quantity" value={quantity1} onchange={handleQuantity1}></lightning-input>
+        <lightning-input label="Price" value={price1} onchange={handlePrice1}></lightning-input>
+
+        <p>Item 2</p>
+        <lightning-input label="Quantity" value={quantity2} onchange={handleQuantity2}></lightning-input>
+        <lightning-input label="Price" value={price2} onchange={handlePrice2}></lightning-input>
+
+        <p>Item 3</p>
+        <lightning-input label="Quantity" value={quantity3} onchange={handleQuantity3}></lightning-input>
+        <lightning-input label="Price" value={price3} onchange={handlePrice3}></lightning-input>
+
+        <p>Item 4</p>
+        <lightning-input label="Quantity" value={quantity4} onchange={handleQuantity4}></lightning-input>
+        <lightning-input label="Price" value={price4} onchange={handlePrice4}></lightning-input>
+
+        <p>Item 5</p>
+        <lightning-input label="Quantity" value={quantity5} onchange={handleQuantity5}></lightning-input>
+        <lightning-input label="Price" value={price5} onchange={handlePrice5}></lightning-input>
+        <lightning-button label="Calculate Total Amount" onclick={calculateTotalBillAmount}></lightning-button>
+
+        <p>Total Bill Amount : {totalBillAmount} including GST</p>
+    </div>
+</template>

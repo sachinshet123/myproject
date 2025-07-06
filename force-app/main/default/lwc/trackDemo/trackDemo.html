@@ -1,0 +1,29 @@
+<template>
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="First Name" onkeyup={handleFirstName} placeholder="type here..."></lightning-input>
+    </div>
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Last Name" onkeyup={handleLastName} placeholder="type here..."></lightning-input>
+    </div>
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Email" onkeyup={handleEmail} placeholder="type here..."></lightning-input>
+    </div>
+    <div>
+        <p>raw properties of js object</p>
+        {firstName}
+        {lastName}
+        {email}
+    </div>
+    <div>
+        <p>object properties without track</p>
+        {withoutTrackObject.firstName}
+        {withoutTrackObject.lastName}
+        {withoutTrackObject.email}
+    </div>
+    <div>
+        <p>object properties with track </p>
+        {withTrackObject.firstName}
+        {withTrackObject.lastName}
+        {withTrackObject.email}
+    </div>
+</template>

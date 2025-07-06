@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <div style="margin-left: 10px;">
+        <p>name : {name}</p>
+        <p>designation : {designation}</p>
+        <p>company : {company}</p>
+        <p>salary : {salary}</p>
+
+        </div>
+        <lightning-badge label={designation} class="slds-badge"></lightning-badge>
+        <div>
+            
+        <lightning-button variant="success" label="Success" title="Successful action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </div>
+    </lightning-card>
+</template>

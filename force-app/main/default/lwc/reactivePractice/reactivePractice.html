@@ -1,0 +1,23 @@
+<template>
+    <div>
+        <p>{personalDetails.name}</p>
+        <template for:each={fruits} for:item="fruit"> 
+            <div key={fruit}>
+                <p>{fruit}</p>
+            </div>
+        </template>
+        <br>
+        <template for:each={personalDetails} for:item="person"> 
+            <div key={person.name}>
+                <p>{person.name}</p>
+                <p>{person.age}</p>
+            </div>
+        </template>
+        <lightning-input label="Enter Your Name" value={name} onchange={handleNameChange}></lightning-input>
+        <lightning-input label="Enter Your Age" value={age} onchange={handleAgeChange}></lightning-input>
+        <lightning-button 
+            label="Add Person" 
+            onclick={addPerson}>
+        </lightning-button>
+    </div>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Create Account along with related Contact">
+        <template lwc:if={showAccountForm}>
+        <lightning-record-form
+            object-api-name="Account"
+            fields={accountFields}
+            onsuccess={handleSuccess}>
+        </lightning-record-form>
+        </template>
+        <template lwc:if={accountId}>
+            <lightning-record-form
+                object-api-name="Contact"
+                fields={contactFields}
+                onsubmit={handleContactSubmit} >
+            </lightning-record-form>
+        </template>
+    </lightning-card>
+</template>

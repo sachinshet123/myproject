@@ -1,0 +1,14 @@
+<template>
+    <div>
+        <p>Enter the subject Marks</p>
+        <lightning-input type="number" label="Enter First Subject" value={sub1} onchange={handleNumber1Change}></lightning-input>
+        <lightning-input type="number" label="Enter Second Subject" value={sub2} onchange={handleNumber2Change}></lightning-input>
+        <lightning-input type="number" label="Enter Third Subject" value={sub3} onchange={handleNumber3Change}></lightning-input>
+        <lightning-button label="Calculate Total Marks" value={totalMarks} onclick={handleTotalMarks}></lightning-button>
+        <lightning-button label="Calculate Percentage" value={percentage} onclick={handleCalculatePercentage}></lightning-button>
+        <lightning-button label="Calculate Grade" value={grade} onclick={handleCalculateGrade}></lightning-button>
+        <p>Total Marks : {totalMarks}</p>
+        <p>Percentage : {percentage}</p>
+        <p>Grade : {grade}</p>
+    </div>
+</template>

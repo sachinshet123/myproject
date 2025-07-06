@@ -1,0 +1,6 @@
+<template>
+    <p>Please Enter the Age</p>
+    <lightning-input type="number" value={age} onchange={handleChangeValue}></lightning-input>
+    <c-child-age-demo age-from-parent-for-age={age} message-from-parent-for-age={message}></c-child-age-demo>
+    <c-child-senior-demo age-from-parent-for-senior={age} message-from-parent-for-senior={message}></c-child-senior-demo>
+</template>

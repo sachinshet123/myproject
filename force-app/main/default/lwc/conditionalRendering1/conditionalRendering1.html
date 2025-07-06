@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Check are you 18 or not ">
+        <lightning-input class="slds-p-left_large slds-m-bottom_medium" type="checkbox" label="Are you 18?" onchange={handleChange} checked="true"></lightning-input>
+        <!-- Display Personal details -->
+        <template lwc:if={showDetails}>
+        <template for:each={details} for:item="detail">
+            <div key={detail.Id} class="slds-p-left_large">
+            <strong>Name : {detail.Name}<br/></strong>
+            <strong>Email : {detail.Email}<br></strong>
+            <strong>Phone : {detail.Phone}<br></strong>
+            <strong>Address : {detail.Address}</strong>
+            </div>
+        </template>
+    </template>
+    <!-- Display error message -->
+    <template lwc:if={showError}>
+    <div>
+    <p class="slds-p-left_large" style="font-size: medium;"><strong> Sorry, you are not eligible for vote</strong> </p>
+    </div>
+</template>
+</lightning-card>
+</template>

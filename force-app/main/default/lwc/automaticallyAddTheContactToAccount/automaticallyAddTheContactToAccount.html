@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Create Account">
+        <template lwc:if={showAccountForm}>
+            <lightning-record-form 
+                object-api-name="Account"
+                fields={accountFields}
+                onsuccess={handleAccountSuccess}
+                onerror={handleError}>
+            </lightning-record-form>
+        </template>
+    </lightning-card>
+
+    <template lwc:if={accountId}>
+        <lightning-card title="Create Contact for Account">
+            <lightning-record-form 
+                object-api-name="Contact"
+                fields={contactFields}
+                onsuccess={handleContactSuccess}
+                onerror={handleError}
+                record-id={accountId} >  <!-- ✅ Automatically associate Contact with Account -->
+            </lightning-record-form>
+        </lightning-card>
+    </template>
+</template>

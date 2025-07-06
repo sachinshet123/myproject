@@ -1,0 +1,14 @@
+<template>
+<div>
+    <lightning-card title="Life Cycle Hooks Demo">
+    <p class="slds-p-horizontal_small">Count : {count}</p>
+        <lightning-button label="Increment" onclick={handleIncrement}></lightning-button>
+        <lightning-button label="Show Count" onclick={handleShowCount}></lightning-button>
+        <lightning-button label="Show/Hide Child" onclick={handleShowChild}></lightning-button>
+    </lightning-card>
+
+    <template if:true={isVisible}>
+        <c-life-cycle-hooks-demo-child></c-life-cycle-hooks-demo-child>
+    </template>
+</div>
+</template>

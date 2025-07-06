@@ -1,0 +1,9 @@
+<template>
+    <div>
+        <lightning-input type="text" label="Billing Address" value={billingAddress} onchange={handleBillingAddressChange}>
+        </lightning-input>
+        <lightning-input type="text" label="Mailing Address" value={mailingAddress} onchange={handleMailingAddressChange}>
+        </lightning-input>
+        <lightning-button label="Copy Billing to Mailing" onclick={copyBillingToMailing}></lightning-button>
+    </div>
+</template>

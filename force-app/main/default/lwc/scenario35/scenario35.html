@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Batch Class">
+    <lightning-button label="Update All Accounts" onclick={handleUpdate} style="padding-left: 10px; " variant="brand"></lightning-button>
+    <template if:true={showSuccessMessage}>
+        <p>Accounts updated successfully!</p>
+    </template>  
+</lightning-card>
+</template>

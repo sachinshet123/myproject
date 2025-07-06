@@ -1,0 +1,21 @@
+<template>
+    <div>
+        <p>Name: {name}</p>
+        <p>Address: {address}</p>
+        <p>Phone: {phone}</p>
+        <p>Email: {email}</p>
+        <p>Enter your age:</p>
+        <lightning-input 
+            type="number" 
+            value={age} 
+            onchange={handleAge}>
+        </lightning-input>
+
+        <template if:true={isEligible}>
+            <p>Eligible to vote</p>
+        </template>
+        <template if:false={isEligible}>
+            <p>Not eligible to vote</p>
+        </template>
+    </div>
+</template>

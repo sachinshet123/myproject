@@ -1,0 +1,65 @@
+<template>
+    <lightning-card title="Create Account Record" icon-name="standard:account">
+        
+        <!-- Display error if exists -->
+        <template if:true={error}>
+            <div style="margin-left: 6%">
+                <lightning-badge label={error} style="color: red;"></lightning-badge>
+            </div>
+        </template>
+
+        <template if:true={accRecord}>
+            <div class="slds-m-around_xx-large">
+                <div class="container-fluid">
+                    
+                    <div class="form-group">
+                        <lightning-input label="Enter Account Name" 
+                                         name="Name" 
+                                         required 
+                                         type="text" 
+                                         value={accRecord.Name} 
+                                         onchange={handleInputChange}>
+                        </lightning-input>
+                    </div>
+
+                    <div class="form-group">
+                        <lightning-input label="Enter Phone Number" 
+                                         name="Phone" 
+                                         type="text" 
+                                         value={accRecord.Phone} 
+                                         onchange={handleInputChange}>
+                        </lightning-input>
+                    </div>
+
+                    <!-- Industry Dropdown -->
+                    <div class="form-group">
+                        <lightning-combobox label="Select Industry"
+                                            name="Industry"
+                                            value={accRecord.Industry}
+                                            options={industryOptions}
+                                            onchange={handleInputChange}>
+                        </lightning-combobox>
+                    </div>
+
+                    <!-- Type Dropdown -->
+                    <div class="form-group">
+                        <lightning-combobox label="Select Account Type"
+                                            name="Type"
+                                            value={accRecord.Type}
+                                            options={typeOptions}
+                                            onchange={handleInputChange}>
+                        </lightning-combobox>
+                    </div>
+
+                </div>
+
+                <br/>
+                <lightning-button label="Submit" 
+                                  onclick={handleSave} 
+                                  variant="brand">
+                </lightning-button>
+
+            </div>
+        </template>
+    </lightning-card>
+</template>

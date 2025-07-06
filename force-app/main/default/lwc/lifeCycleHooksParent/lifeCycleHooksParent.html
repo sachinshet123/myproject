@@ -1,0 +1,7 @@
+<template>
+    <p>This is life cycle Hook Parent Component</p>
+    <lightning-button label="Click me" onclick={handleClick}></lightning-button>
+    <template if:true={bool}>
+        <c-life-cycle-hook-child></c-life-cycle-hook-child>
+    </template>
+</template>

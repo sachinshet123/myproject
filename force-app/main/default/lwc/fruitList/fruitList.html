@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Fruit List" icon-name="utility:food_and_drink">
+        <template for:each={fruits} for:item="fruit">
+            <div key={fruit.id} class="slds-p-around_small">
+                <lightning-input type="text" label="Fruit" value={fruit.name}
+                    data-id={fruit.id} onchange={handleInputChange}>
+                </lightning-input>
+            </div>
+        </template>
+    </lightning-card>
+</template>

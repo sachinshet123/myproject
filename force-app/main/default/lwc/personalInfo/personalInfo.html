@@ -1,0 +1,10 @@
+<template>
+    <lightning-card variant="Narrow" title="Personal Information" icon-name="custom:custom63">
+        <div class="slds-p-horizontal_medium">
+            <lightning-input type="text" label="Full Name" value={personalInformation.fullName} data-field="fullName" onchange={handlePIChange}></lightning-input>
+            <lightning-input type="email" label="Email" value={personalInformation.email} data-field="email" onchange={handlePIChange}></lightning-input>
+            <lightning-input type="tel" label="Phone" value={personalInformation.phone} data-field="phone" onchange={handlePIChange}></lightning-input>
+            <lightning-input type="text" label="Address" value={personalInformation.address} data-field="address" onchange={handlePIChange}></lightning-input>
+        </div>
+    </lightning-card>
+</template>

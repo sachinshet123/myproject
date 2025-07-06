@@ -1,0 +1,16 @@
+@import 'c/cssLibrary';
+
+h1 {
+    color: brown;
+}
+/*h2 {
+    color: blue;
+}*/
+
+:host {
+    background-color: yellow;
+}
+
+.design {
+    background-color: green;
+}

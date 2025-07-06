@@ -1,0 +1,20 @@
+<template>
+    <lightning-combobox
+        name="objectName"
+        label="Select Object"
+        value={selectedValue}
+        placeholder="Select Object"
+        options={objectList}
+        onchange={handleChange}
+    ></lightning-combobox>
+    <template  if:true={showData}>
+        <lightning-card>
+            <div>
+                <lightning-record-form
+                    object-api-name={objectName}
+                    record-type-id={recordTypeId}
+                    fields={fields}>
+                </lightning-record-form>
+            </div>
+        </lightning-card>
+</template>

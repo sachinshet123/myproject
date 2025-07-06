@@ -1,0 +1,12 @@
+<template>
+  <lightning-card>
+    <div>
+
+      <lightning-input label="Name" name="Account Name" value={name} onchange={handleChange}></lightning-input>
+      <lightning-input label="Phone" name="Phone" value={phone} onchange={handleChange}></lightning-input>
+      <lightning-input label="Industry" name="Industry" value={industry} onchange={handleChange}></lightning-input>
+      <lightning-input label="Rating" name="Rating" value={rating} onchange={handleChange}></lightning-input>
+      <lightning-button label="Update Account" onclick={handleUpdate}></lightning-button>
+    </div>
+  </lightning-card>
+</template>
